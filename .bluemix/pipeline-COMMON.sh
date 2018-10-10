@@ -2,7 +2,7 @@
 
 set -ex
 
-export COMPOSER_VERSION=0.19.5
+export COMPOSER_VERSION=0.20.1
 
 function install_nodejs {
     npm config delete prefix
