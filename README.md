@@ -59,7 +59,7 @@ Use the ``Deploy to IBM Cloud`` button **OR** manually deploy to IBM Cloud.
   + 3. Output `Now using node v8.11.3 (npm v5.6.0)`
 - [Hyperledger Composer](https://hyperledger.github.io/composer/installing/development-tools.html)
   * to install composer cli
-    `npm install -g composer-cli@0.19.5`
+    `npm install -g composer-cli@0.20.1`
 - [Cloud Wallet Package](https://www.npmjs.com/package/@ampretia/composer-wallet-cloudant)
   * `npm install -g @ampretia/composer-wallet-cloudant@0.2.1`
 - [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/install-go-cli.html)
@@ -268,7 +268,7 @@ cf login
 Push the REST server using the docker image:
 
 ```
-cf push vehicle-manufacture-rest --docker-image ibmblockchain/composer-rest-server:0.19.5 -i 1 -m 256M --no-start --no-manifest --random-route
+cf push vehicle-manufacture-rest --docker-image hyperledger/composer-rest-server:0.20.1 -i 1 -m 256M --no-start --no-manifest --random-route
 ```
 
 Set the NODE_CONFIG environment variable for the REST server:
@@ -290,7 +290,7 @@ cf set-env vehicle-manufacture-rest COMPOSER_WEBSOCKETS true
 Push playground using the docker image:
 
 ```
-cf push vehicle-manufacture-playground --docker-image ibmblockchain/composer-playground:0.19.5 -i 1 -m 256M --no-start --random-route --no-manifest
+cf push vehicle-manufacture-playground --docker-image hyperledger/composer-playground:0.20.1 -i 1 -m 256M --no-start --random-route --no-manifest
 ```
 
 Set the NODE_CONFIG environment variable for the playground using the contents of your `cloudant.json` file:

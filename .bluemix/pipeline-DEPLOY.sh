@@ -185,7 +185,7 @@ function deploy_composer_rest_server {
     fi
     cf push \
         ${CF_APP_NAME} \
-        --docker-image ibmblockchain/composer-rest-server:${COMPOSER_VERSION} \
+        --docker-image hyperledger/composer-rest-server:${COMPOSER_VERSION} \
         -i 1 \
         -m 256M \
         --no-start \
